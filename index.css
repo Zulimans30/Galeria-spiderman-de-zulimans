@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --fuente-bebas: "Bebas neue";
+}
+
+.imagen-logo {
+    border-radius: 2000%;
+    width: 35%;
+    height: 1100%;
+    margin-left: 20%;
+    margin-top: -32%;
+}
+.titulo{
+    font-family: var(--fuente-bebas);
+    margin-top: -30%;
+    margin-left: -12%;
+    
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+body{
+    background-color: #111;
+    display: grid;
+    margin-left: 15%;
+    padding-block: 150px;
+    place-content: center;
+    gap: 8px;
+    color: #f6f6f6;
+}
+
+@keyframes show{
+    from {
+        opacity: 0; scale: 10%;
+    }
+    to {
+        opacity: 1; scale: 100%;
+    }
+}
+
+
+img {
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
